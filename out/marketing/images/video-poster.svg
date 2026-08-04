@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171127"/><stop offset=".6" stop-color="#5d3487"/><stop offset="1" stop-color="#8f577e"/></linearGradient><radialGradient id="g"><stop stop-color="#f2aa92" stop-opacity=".7"/><stop offset="1" stop-color="#f2aa92" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1280" height="720" fill="url(#bg)"/><circle cx="930" cy="140" r="330" fill="url(#g)"/>
+  <g transform="translate(100 90)"><rect width="56" height="56" rx="16" fill="#131628"/><path d="M-2 23 38 0" stroke="#8ce4c2" stroke-width="13" stroke-linecap="round"/><path d="m23 57 43-25" stroke="#c68be7" stroke-width="13" stroke-linecap="round"/><text x="72" y="38" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="white">Escolinha Pro</text></g>
+  <text x="100" y="265" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#bba8ee" letter-spacing="4">PRIMEIROS PASSOS</text>
+  <text x="100" y="345" font-family="Arial,sans-serif" font-size="64" font-weight="800" fill="white">Conheça a organização</text><text x="100" y="415" font-family="Arial,sans-serif" font-size="64" font-weight="800" fill="white">da sua rotina.</text>
+  <text x="100" y="480" font-family="Arial,sans-serif" font-size="22" fill="#ddd3ea">Prévia demonstrativa local para substituição pelo tutorial oficial.</text>
+  <g transform="translate(980 500)"><circle r="72" fill="white"/><path d="M-18-28 35 0-18 28Z" fill="#2d1e4d"/></g>
+</svg>

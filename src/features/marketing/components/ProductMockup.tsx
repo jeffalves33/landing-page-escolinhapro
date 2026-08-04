@@ -4,7 +4,7 @@ import styles from "../styles/marketing.module.css";
 type Variant = "overview" | "students" | "attendance" | "finance";
 
 const students = [
-  { name: "Lívia Martins", group: "Ginastica Infantil A", responsible: "Paula Martins", status: "Em dia", tone: "ok" },
+  { name: "Lívia Martins", group: "Ginástica Infantil A", responsible: "Paula Martins", status: "Em dia", tone: "ok" },
   { name: "Carolina Garcia", group: "Jazz Kids B", responsible: "Renata Costa", status: "Pendente", tone: "warn" },
   { name: "Sofia Almeida", group: "GR Juvenil", responsible: "Eduardo Almeida", status: "Em dia", tone: "ok" },
   { name: "Clara Ribeiro", group: "Baby Class A", responsible: "Luciana Ribeiro", status: "Em dia", tone: "ok" },
@@ -14,8 +14,8 @@ const quickModules = [
   { icon: "layers" as const, label: "Polos", value: "6 unidades" },
   { icon: "pin" as const, label: "Locais", value: "14 salas" },
   { icon: "school" as const, label: "Turmas", value: "32 ativas" },
-  { icon: "users" as const, label: "Alunas", value: "512 ativas" },
-  { icon: "teacher" as const, label: "Professoras", value: "28 perfis" },
+  { icon: "users" as const, label: "Alunos", value: "512 ativos" },
+  { icon: "teacher" as const, label: "Professores", value: "28 perfis" },
   { icon: "wallet" as const, label: "Financeiro", value: "Julho" },
   { icon: "alert" as const, label: "Cobranças", value: "18 atrasos" },
   { icon: "bag" as const, label: "Produtos", value: "12 itens" },
@@ -42,8 +42,8 @@ export function ProductMockup({ variant = "overview", compact = false }: { varia
           <nav>
             <span><Icon name="layers"/>Polos</span>
             <span className={active === "classes" ? styles.appNavActive : ""}><Icon name="school"/>Turmas</span>
-            <span className={active === "students" ? styles.appNavActive : ""}><Icon name="users"/>Alunas</span>
-            <span><Icon name="teacher"/>Professoras</span>
+            <span className={active === "students" ? styles.appNavActive : ""}><Icon name="users"/>Alunos</span>
+            <span><Icon name="teacher"/>Professores</span>
           </nav>
           <span className={styles.appNavSection}>FINANCEIRO</span>
           <nav>
@@ -75,10 +75,10 @@ function AppHeader({ title, description, action }: { title: string; description:
 function Overview() {
   return (
     <>
-      <AppHeader title="Painel administrativo" description="Visão operacional e financeira da instituição." action="Nova aluna" />
+      <AppHeader title="Painel administrativo" description="Visão operacional e financeira da instituição." action="Novo aluno" />
       <div className={`${styles.metricGrid} ${styles.metricGridFour}`}>
-        <Metric label="Alunas ativas" value="512" delta="+12% no mês" icon="users" />
-        <Metric label="Professoras" value="28" delta="+2 novos perfis" icon="school" />
+        <Metric label="Alunos ativos" value="512" delta="+12% no mês" icon="users" />
+        <Metric label="Professores" value="28" delta="+2 novos perfis" icon="school" />
         <Metric label="Polos" value="6" delta="Sem alterações" icon="layers" />
         <Metric label="Locais" value="14" delta="+2 no mês" icon="pin" />
       </div>
@@ -118,10 +118,10 @@ function Overview() {
 function Students() {
   return (
     <>
-      <AppHeader title="Alunas e responsáveis" description="Cadastros, vínculos e situação financeira." action="Cadastrar aluna" />
+      <AppHeader title="Alunos e responsáveis" description="Cadastros, vínculos e situação financeira." action="Cadastrar aluno" />
       <div className={styles.listToolbar}><div><Icon name="search"/><span>Buscar por nome, turma ou responsável</span></div><button type="button">Todos os polos</button></div>
       <section className={styles.tableCard}>
-        <div className={styles.tableHead}><span>Aluna</span><span>Turma</span><span>Responsável</span><span>Situação</span></div>
+        <div className={styles.tableHead}><span>Aluno</span><span>Turma</span><span>Responsável</span><span>Situação</span></div>
         {students.map((student) => (
           <div className={styles.tableRow} key={student.name}>
             <span className={styles.studentName}><i>{student.name.slice(0, 2).toUpperCase()}</i><b>{student.name}</b></span>
@@ -132,7 +132,7 @@ function Students() {
         ))}
       </section>
       <div className={styles.studentBottomGrid}>
-        <section><span>Cadastros ativos</span><strong>512 alunas</strong><small>36 novas nos últimos 30 dias</small></section>
+        <section><span>Cadastros ativos</span><strong>512 alunos</strong><small>36 novos nos últimos 30 dias</small></section>
         <section><span>Pendências cadastrais</span><strong>7</strong><small>Documentos ou contatos incompletos</small></section>
       </div>
     </>
@@ -143,9 +143,9 @@ function Attendance() {
   const names = ["Lívia Martins", "Carolina Garcia", "Sofia Almeida", "Clara Ribeiro", "Isabela Rocha"];
   return (
     <>
-      <AppHeader title="Chamada — Ginastica Infantil A" description="Terça-feira · 14:00 às 15:00 · Polo Centro" action="Concluir chamada" />
+      <AppHeader title="Chamada — Ginástica Infantil A" description="Terça-feira · 14:00 às 15:00 · Polo Centro" action="Concluir chamada" />
       <div className={styles.attendanceSummary}>
-        <div><span>Alunas</span><strong>18</strong></div><div><span>Presentes</span><strong>16</strong></div><div><span>Presença</span><strong>89%</strong></div>
+        <div><span>Alunos</span><strong>18</strong></div><div><span>Presentes</span><strong>16</strong></div><div><span>Presença</span><strong>89%</strong></div>
       </div>
       <section className={styles.attendanceList}>
         {names.map((name, index) => (
@@ -205,18 +205,18 @@ export function PhoneMockup({ screen = "attendance" }: { screen?: "attendance" |
         {screen === "attendance" && <PhoneAttendance />}
         {screen === "payments" && <PhonePayments />}
         {screen === "home" && <PhoneHome />}
-        <div className={styles.phoneNav}><span className={styles.phoneNavActive}><Icon name="chart"/>Início</span><span><Icon name="school"/>Turmas</span><span><Icon name="users"/>Alunas</span><span><Icon name="bell"/>Avisos</span></div>
+        <div className={styles.phoneNav}><span className={styles.phoneNavActive}><Icon name="chart"/>Início</span><span><Icon name="school"/>Turmas</span><span><Icon name="users"/>Alunos</span><span><Icon name="bell"/>Avisos</span></div>
       </div>
     </div>
   );
 }
 
 function PhoneAttendance() {
-  return <div className={styles.phoneBody}><span className={styles.phoneKicker}>CHAMADA DE HOJE</span><h4>Ginastica Infantil A</h4><p>14:00 · Polo Centro</p><div className={styles.phoneProgress}><b>16 presentes de 18</b><span><i style={{width:"89%"}}/></span></div>{["Lívia Martins","Carolina Garcia","Sofia Almeida"].map((n,i)=><div className={styles.phoneStudent} key={n}><i>{n.slice(0,2).toUpperCase()}</i><span><b>{n}</b><small>{i===1?"Ausente":"Presente"}</small></span><button data-off={i===1}>✓</button></div>)}<button className={styles.phonePrimary}>Concluir chamada</button></div>;
+  return <div className={styles.phoneBody}><span className={styles.phoneKicker}>CHAMADA DE HOJE</span><h4>Ginástica Infantil A</h4><p>14:00 · Polo Centro</p><div className={styles.phoneProgress}><b>16 presentes de 18</b><span><i style={{width:"89%"}}/></span></div>{["Lívia Martins","Carolina Garcia","Sofia Almeida"].map((n,i)=><div className={styles.phoneStudent} key={n}><i>{n.slice(0,2).toUpperCase()}</i><span><b>{n}</b><small>{i===1?"Ausente":"Presente"}</small></span><button data-off={i===1}>✓</button></div>)}<button className={styles.phonePrimary}>Concluir chamada</button></div>;
 }
 function PhonePayments() {
   return <div className={styles.phoneBody}><span className={styles.phoneKicker}>FINANCEIRO · JULHO</span><h4>R$ 78.250</h4><p>Receitas do período</p><div className={styles.phoneFinanceRow}><span><small>Despesas</small><b>R$ 24.530</b></span><span><small>Saldo</small><b>R$ 53.720</b></span></div><div className={styles.phoneHeroMetric}><span>Taxa de recebimento</span><strong>92%</strong><small>R$ 72.140 recebidos</small></div>{["PIX confirmado","Mensalidade pendente","Custo registrado"].map((n,i)=><div className={styles.phoneEvent} key={n}><i><Icon name={i===0?"pix":i===1?"alert":"invoice"}/></i><span><b>{n}</b><small>{["Lívia Martins · agora","Carolina Garcia · há 2h","Aluguel · ontem"][i]}</small></span></div>)}</div>;
 }
 function PhoneHome() {
-  return <div className={styles.phoneBody}><span className={styles.phoneKicker}>OLÁ, ADMINISTRADOR</span><h4>Resumo de hoje</h4><p>Operação da instituição</p><div className={styles.phoneMiniGrid}><div><Icon name="users"/><b>512</b><small>alunas</small></div><div><Icon name="school"/><b>32</b><small>turmas</small></div></div><div className={styles.phoneNext}><span>Próxima turma</span><strong>Ginastica Infantil A</strong><small>14:00 · 18 alunas</small><button>Iniciar chamada</button></div></div>;
+  return <div className={styles.phoneBody}><span className={styles.phoneKicker}>OLÁ, ADMINISTRADOR</span><h4>Resumo de hoje</h4><p>Operação da instituição</p><div className={styles.phoneMiniGrid}><div><Icon name="users"/><b>512</b><small>alunos</small></div><div><Icon name="school"/><b>32</b><small>turmas</small></div></div><div className={styles.phoneNext}><span>Próxima turma</span><strong>Ginástica Infantil A</strong><small>14:00 · 18 alunos</small><button>Iniciar chamada</button></div></div>;
 }

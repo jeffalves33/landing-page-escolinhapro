@@ -13,7 +13,7 @@ export const capabilities = [
 
 export const modules = [
   { icon: "users", title: "Alunos e responsáveis", text: "Cadastros completos, vínculos familiares e histórico centralizado.", span: "wide" },
-  { icon: "school", title: "Turmas e professoras", text: "Organize horários, modalidades, polos e equipe.", span: "normal" },
+  { icon: "school", title: "Turmas e professores", text: "Organize horários, modalidades, polos e equipe.", span: "normal" },
   { icon: "check", title: "Chamadas e presença", text: "Registre a aula pelo celular e acompanhe frequência.", span: "normal" },
   { icon: "pix", title: "Mensalidades e PIX", text: "Controle vencimentos, pendências e recebimentos.", span: "normal" },
   { icon: "chart", title: "Financeiro", text: "Custos, entradas e visão consolidada da instituição.", span: "normal" },
@@ -31,16 +31,16 @@ export const tourSteps = [
   {
     id: "alunos",
     kicker: "Base organizada",
-    title: "Alunas, responsáveis e cobranças conectados.",
+    title: "Alunos, responsáveis e cobranças conectados.",
     text: "Consulte dados importantes sem alternar entre arquivos, mensagens e planilhas. Cada vínculo permanece próximo do contexto financeiro.",
     bullets: ["Busca rápida", "Responsáveis vinculados", "Situação financeira visível"],
   },
   {
     id: "presenca",
     kicker: "Rotina da aula",
-    title: "Professoras registram chamadas sem interromper a turma.",
+    title: "Professores registram chamadas sem interromper a turma.",
     text: "A experiência foi pensada para funcionar no celular: poucos passos, alvos claros e retorno visual imediato.",
-    bullets: ["Lista por turma", "Presença em poucos toques", "Histórico por aluna"],
+    bullets: ["Lista por turma", "Presença em poucos toques", "Histórico por aluno"],
   },
   {
     id: "financeiro",
@@ -53,7 +53,7 @@ export const tourSteps = [
 
 export const trustItems = [
   { icon: "layers", title: "Dados separados", text: "Cada instituição opera em seu próprio ambiente lógico." },
-  { icon: "shield", title: "Perfis e acessos", text: "Crie os sub perfis das professoras." },
+  { icon: "shield", title: "Perfis e acessos", text: "Crie perfis de acesso para professores e outros membros da equipe." },
   { icon: "history", title: "Histórico de operações", text: "Ações importantes podem ser rastreadas para apoiar a gestão." },
   { icon: "settings", title: "Configuração própria", text: "Regras e rotinas são ajustadas por instituição." },
   { icon: "support", title: "Suporte", text: "Atendimento direto para implantação e dúvidas." },
