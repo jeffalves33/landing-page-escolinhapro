@@ -24,34 +24,41 @@ export function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className={styles.siteHeader}>
-      <div className={styles.headerInner}>
-        <Logo />
-        <nav className={styles.desktopNav} aria-label="Navegação principal">
-          {navigation.map((item) => (
-            <a className={styles.navLink} href={item.href} key={item.label}>
-              {item.label}
+    <>
+      <header className={styles.siteHeader}>
+        <div className={styles.headerInner}>
+          <Logo />
+          <nav className={styles.desktopNav} aria-label="Navegação principal">
+            {navigation.map((item) => (
+              <a className={styles.navLink} href={item.href} key={item.label}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <div className={styles.headerActions}>
+            <a className={styles.loginLink} href={marketingConfig.routes.login}>Entrar</a>
+            <a className={styles.headerCta} href={marketingConfig.routes.signup}>
+              Testar grátis <Icon name="arrow"/>
             </a>
-          ))}
-        </nav>
-        <div className={styles.headerActions}>
-          <a className={styles.loginLink} href={marketingConfig.routes.login}>Entrar</a>
-          <a className={styles.headerCta} href={marketingConfig.routes.signup}>
-            Testar grátis <Icon name="arrow"/>
-          </a>
+          </div>
+          <button
+            className={styles.mobileMenuButton}
+            type="button"
+            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+            aria-controls="mobile-navigation"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((open) => !open)}
+          >
+            <Icon name={mobileOpen ? "close" : "menu"}/>
+          </button>
         </div>
-        <button
-          className={styles.mobileMenuButton}
-          type="button"
-          aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((open) => !open)}
-        >
-          <Icon name={mobileOpen ? "close" : "menu"}/>
-        </button>
-      </div>
+      </header>
 
-      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ""}`} aria-hidden={!mobileOpen}>
+      <div
+        id="mobile-navigation"
+        className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ""}`}
+        aria-hidden={!mobileOpen}
+      >
         <div className={styles.mobileMenuInner}>
           <nav aria-label="Navegação mobile">
             {navigation.map((item) => (
@@ -66,6 +73,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

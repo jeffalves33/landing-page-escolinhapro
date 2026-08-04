@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-
-Host: https://www.escolinhapro.com
-Sitemap: https://www.escolinhapro.com/sitemap.xml
