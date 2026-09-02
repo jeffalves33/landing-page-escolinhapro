@@ -14,7 +14,7 @@ export function LegalPage({ eyebrow, title, intro, sections }: { eyebrow: string
           <span>{eyebrow}</span>
           <h1>{title}</h1>
           <p>{intro}</p>
-          <small>Última atualização estrutural: 21 de julho de 2026.</small>
+          <small>Última atualização: 4 de agosto de 2026.</small>
         </div>
         <div className={styles.legalLayout}>
           <aside aria-label="Índice da página">
@@ -39,7 +39,7 @@ export const legalMetadata: Record<"terms" | "privacy", Metadata> = {
   },
   privacy: {
     title: "Política de Privacidade",
-    description: "Informações gerais sobre privacidade e tratamento de dados no Escolinha Pro.",
+    description: "Como o Escolinha Pro trata dados pessoais, protege informações e atende aos direitos dos titulares.",
     alternates: { canonical: "/privacidade" },
   },
 };

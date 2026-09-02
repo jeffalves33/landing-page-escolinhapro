@@ -5,5 +5,5 @@ import { termsSections } from "@/features/marketing/data/legal";
 export const metadata: Metadata = legalMetadata.terms;
 
 export default function TermsPage() {
-  return <LegalPage eyebrow="Documento legal" title="Termos de Uso" intro="Condições gerais para acesso e utilização do Escolinha Pro." sections={termsSections} />;
+  return <LegalPage eyebrow="Documento legal" title="Termos de Uso" intro="Condições para utilizar o Escolinha Pro e contratar seus serviços com clareza e segurança." sections={termsSections} />;
 }
