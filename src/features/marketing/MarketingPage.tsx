@@ -60,7 +60,7 @@ function Hero() {
           <p>Gerencie sua operação em um só lugar, sem depender de planilhas.</p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href={marketingConfig.routes.signup}>Testar grátis por 14 dias <Icon name="arrow"/></a>
-            <a className={styles.secondaryButton} href="#planos">Conhecer os planos <Icon name="chevron"/></a>
+            <a className={styles.secondaryButton} href="#planos">Conhecer o plano <Icon name="chevron"/></a>
           </div>
         </Reveal>
 
@@ -132,7 +132,7 @@ function Automation() {
           ))}
         </div>
         <Reveal className={styles.automationPanel}>
-          <div className={styles.automationPanelCopy}><span>ROTINA AUTOMATIZADA</span><h3>O sistema organiza o caminho. Sua equipe mantém o controle.</h3><p>Regras configuráveis apoiam cobranças, taxas, custos, conciliação e lembretes conforme o plano contratado.</p><a href="#planos">Comparar recursos <Icon name="arrow"/></a></div>
+          <div className={styles.automationPanelCopy}><span>ROTINA AUTOMATIZADA</span><h3>O sistema organiza o caminho. Sua equipe mantém o controle.</h3><p>Regras configuráveis apoiam cobranças, taxas, custos, conciliação e lembretes.</p><a href="#planos">Conhecer o plano <Icon name="arrow"/></a></div>
           <div className={styles.automationVisual}>
             <div className={styles.automationOrb}><Icon name="spark"/></div>
             <div className={styles.autoCard} data-pos="one"><Icon name="invoice"/><span><b>Mensalidades geradas</b><small>186 cobranças organizadas</small></span><em>Concluído</em></div>
@@ -201,12 +201,11 @@ function Pricing() {
   return (
     <section id="planos" className={styles.pricingSection}>
       <div className={styles.sectionContainer}>
-        <Reveal><SectionHeading eyebrow="Planos transparentes" title="Escolha a estrutura adequada para sua instituição." text="Todos os planos começam com 14 dias de teste gratuito na contratação inicial." align="center" /></Reveal>
+        <Reveal><SectionHeading eyebrow="Plano Gestão" title="Tudo para organizar sua instituição." text="R$ 119,90 por mês, com 14 dias de teste gratuito na contratação inicial." align="center" /></Reveal>
         <div className={styles.pricingGrid}>
           {plans.map((plan, index) => (
             <Reveal className={`${styles.planCard} ${plan.highlighted ? styles.planHighlighted : ""}`} key={plan.name} delay={index * 80}>
-              {plan.highlighted && <span className={styles.planBadge}>Mais escolhido</span>}
-              <div className={styles.planTop}><span>{plan.name}</span><p>{plan.description}</p><div className={styles.planPrice}><sup>R$</sup><strong>{plan.price}</strong><small>/mês</small></div><em>{plan.audience}</em></div>
+              <div className={styles.planTop}><span>{plan.name}</span><p>{plan.description}</p><div className={styles.planPrice}><sup>R$</sup><strong>{plan.price.toFixed(2).replace(".", ",")}</strong><small>/mês</small></div><em>{plan.audience}</em></div>
               <a className={plan.highlighted ? styles.primaryButton : styles.planButton} href={marketingConfig.routes.signup}>Testar grátis <Icon name="arrow"/></a>
               <div className={styles.planFeatures}><b>O que está incluído</b><ul>{plan.features.map((feature) => <li key={feature}><Icon name="check"/>{feature}</li>)}</ul></div>
             </Reveal>

@@ -13,7 +13,7 @@ export function Footer() {
           <span>Um produto da <a href={marketingConfig.companyUrl} target="_blank" rel="noreferrer">Prodexy Labs</a>.</span>
         </div>
         <div className={styles.footerColumns}>
-          <div><b>Produto</b><a href="#produto">Experiência</a><a href="#funcionalidades">Funcionalidades</a><a href="#automacoes">Automações</a><a href="#planos">Planos</a></div>
+          <div><b>Produto</b><a href="#produto">Experiência</a><a href="#funcionalidades">Funcionalidades</a><a href="#automacoes">Automações</a><a href="#planos">Plano</a></div>
           <div><b>Documentação</b><a href="#ajuda">Vídeos e guias</a><a href="#duvidas">Dúvidas frequentes</a><a href={`mailto:${marketingConfig.email}`}>E-mail</a><a href={marketingConfig.companyUrl} target="_blank" rel="noreferrer">Prodexy Labs</a></div>
           <div><b>Acesso</b><a href={marketingConfig.routes.login}>Entrar</a><a href={marketingConfig.routes.signup}>Criar conta</a><a href={marketingConfig.routes.terms}>Termos</a><a href={marketingConfig.routes.privacy}>Privacidade</a></div>
         </div>

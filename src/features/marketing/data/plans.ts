@@ -10,48 +10,23 @@ export type Plan = {
 
 export const plans: Plan[] = [
   {
-    name: "Essencial",
-    price: 129,
-    description: "Para operações menores que precisam abandonar planilhas e centralizar a rotina.",
-    audience: "Até 150 alunos ativos · 1 polo",
-    limits: ["Até 150 alunos ativos", "1 polo"],
-    features: [
-      "Gestão de alunos, turmas e professores",
-      "Chamadas e presença",
-      "Mensalidades",
-      "PIX renovável",
-      "Portal básico",
-    ],
-  },
-  {
-    name: "Profissional",
-    price: 299,
-    description: "Para instituições em crescimento que precisam controlar operação e recebimentos.",
-    audience: "Até 400 alunos ativos · Até 2 polos",
-    limits: ["Até 400 alunos ativos", "Até 2 polos"],
-    features: [
-      "Todos os recursos do Essencial",
-      "Custos mensais",
-      "Eventos simples",
-      "Conciliação de pagamentos",
-      "Portal completo",
-    ],
-    highlighted: true,
-  },
-  {
     name: "Gestão",
-    price: 499,
-    description: "Para estruturas maiores que exigem visão financeira completa e múltiplos polos.",
+    price: 119.9,
+    description: "Gestão completa para instituições que querem organizar operação e financeiro em um só lugar.",
     audience: "Até 700 alunos ativos · Polos ilimitados",
     limits: ["Até 700 alunos ativos", "Polos ilimitados"],
     features: [
-      "Todos os recursos do Profissional",
+      "Gestão de alunos, turmas e professores",
+      "Chamadas, mensalidades e recebimentos",
+      "Eventos simples e conciliação",
+      "Portal completo",
       "Catálogo de produtos",
       "Taxa automática por atraso",
       "Lembretes",
       "Gestão financeira completa",
       "Relatórios avançados",
     ],
+    highlighted: true,
   },
 ];
 

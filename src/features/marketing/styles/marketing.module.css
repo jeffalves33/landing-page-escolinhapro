@@ -927,6 +927,11 @@
   padding: 28px;
   background: white;
 }
+.pricingGrid {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 580px;
+  margin-inline: auto;
+}
 .planTop {
   min-height: 280px;
   margin: -28px -28px 0;

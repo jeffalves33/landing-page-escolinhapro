@@ -1,6 +1,6 @@
 export const navigation = [
   { label: "Produto", href: "#produto" },
-  { label: "Planos", href: "#planos" },
+  { label: "Plano", href: "#planos" },
   { label: "Documentação", href: "#ajuda" },
 ] as const;
 
@@ -76,6 +76,6 @@ export const faqs = [
   { q: "Como recebo as mensalidades?", a: "A instituição configura sua operação de recebimentos. O sistema organiza cobranças, PIX, vencimentos, conciliação e pendências conforme os recursos do plano." },
   { q: "Consigo cancelar?", a: "Sim. As regras de cancelamento e vigência ficam detalhadas nos termos comerciais e na contratação." },
   { q: "Meus dados ficam separados de outras instituições?", a: "Sim. O produto foi projetado para separar os dados e configurações de cada instituição." },
-  { q: "Posso mudar de plano?", a: "Sim. A mudança depende dos limites e recursos necessários para a sua operação." },
+  { q: "Quanto custa o Escolinha Pro?", a: "O plano Gestão custa R$ 119,90 por mês para novas assinaturas, com 14 dias de teste gratuito na contratação inicial." },
   { q: "O sistema serve para quem?", a: "A comunicação atende ginástica, dança, futebol, futevôlei, natação, vôlei, artes marciais, estúdios, academias e outras atividades recorrentes." },
 ] as const;
